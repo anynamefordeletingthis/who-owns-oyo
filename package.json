@@ -1,10 +1,12 @@
 {
   "name": "who-owns-oyo",
+  "homepage": "https://dipaakgiri.github.io/who-owns-oyo/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./serve.js"
+    "dev": "node ./serve.js",
+    "deploy": "gh-pages --dist ."
   },
   "keywords": [],
   "author": "",
