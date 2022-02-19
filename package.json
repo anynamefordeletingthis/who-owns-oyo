@@ -5,13 +5,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./serve.js",
+    "dev": "ts-node ./serve.js",
     "deploy": "gh-pages --dist ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "express": "^4.17.3",
+    "gh-pages": "^3.2.3",
+    "ts": "^0.2.2",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
   }
 }

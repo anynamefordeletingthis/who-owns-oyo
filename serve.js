@@ -1,20 +1,18 @@
-const { readFileSync, watchFile } = require("fs");
-const http = require("http");
 const path = require("path");
 
 const root = path.resolve(__dirname);
-const readStatic = (path) => readFileSync(path);
 
+const express = require("express");
+const router = express.Router();
 
+router.use(express.static(root));
 
-
-const server = http.createServer((req, res) => {
-    res.end(readStatic(root + "/index.html"));
-});
-
-server.listen(3000, "localhost");
-
-watchFile(root + "/index.html", (curr, prev) => {
-    server.close();
-    server.listen(3000, "localhost");
+router.get("/", (req, res) => {
+    res.send("./index.html")
 })
+
+const app = express();
+
+app.use(router);
+
+app.listen(3000);
