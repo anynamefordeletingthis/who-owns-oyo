@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node ./serve.js",
+    "dev": "npm run build && ts-node ./serve.js",
+    "build": "npx webpack build",
     "deploy": "gh-pages --dist ."
   },
   "keywords": [],

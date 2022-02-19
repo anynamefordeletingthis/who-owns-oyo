@@ -70,6 +70,7 @@ Object.keys(shares).forEach((share, index) => {
     tempDiv.append(tempDiv2)
     tempDiv.append(tempSpan)
     flags.append(tempDiv);
+
 })
 
 
