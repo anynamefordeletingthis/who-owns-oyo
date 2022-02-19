@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>who owns oyo</title>
-    <script src="src/index.js" defer></script>
+    <script src="dist/main.js" defer></script>
+    <link rel="icon" type="image/png" href="/public/images//faviocon.ico">
 </head>
 
 <body>
@@ -14,7 +15,9 @@
     <header>WHO OWNS <span>OYO</span></header>
     <div class="container">
         <div class="pie-chart">
-            <div class="company-logo">OYO</div>
+            <div class="company-logo">
+                <img src="./public/images/oyo-logo.png" alt="OYO">
+            </div>
 
         </div>
         <div class="flags"></div>
@@ -46,6 +49,9 @@
         justify-content: center;
         align-items: center;
 
+        font-size: medium;
+        font-family: sans-serif;
+
     }
 
     .pie-chart {
@@ -60,8 +66,14 @@
     }
 
     .pie-chart>.company-logo {
-        background-color: red;
+        background-color: white;
         padding: .5rem;
+        border-radius: 5px;
+    }
+
+    .pie-chart>.company-logo>img {
+        width: 50px;
+        background: transparent;
     }
 
     .flags {

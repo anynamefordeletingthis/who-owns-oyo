@@ -3,10 +3,12 @@
   "homepage": "https://dipaakgiri.github.io/who-owns-oyo/",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "dev": "npm run build && ts-node ./serve.js",
-    "build": "npx webpack build",
+    "serve": "npm run build && serve .",
+    "start": "nodemon --exec npm run serve",
+    "build": "webpack --config webpack.config.js",
+    "predeploy": "npm run build",
     "deploy": "gh-pages --dist ."
   },
   "keywords": [],
@@ -15,9 +17,13 @@
   "devDependencies": {
     "express": "^4.17.3",
     "gh-pages": "^3.2.3",
+    "http-server": "^14.1.0",
+    "nodemon": "^2.0.15",
+    "serve": "^13.0.2",
     "ts": "^0.2.2",
     "ts-node": "^10.5.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
     "webpack": "^5.69.1",

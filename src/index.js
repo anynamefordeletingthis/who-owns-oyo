@@ -36,7 +36,7 @@ var of_total_share = 0;
 
 Object.keys(shares).forEach((share, index) => {
 
-    console.log(of_total_share, shares[share])
+
 
     shares_colors += `${share_colors[index]} ${of_total_share}% ${of_total_share + shares[share]}%, `
 
